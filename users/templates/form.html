@@ -1,0 +1,45 @@
+{% load comment_tags %}
+{% for hidden_field in form.hidden_fields %}
+    {{ hidden_field }}
+{% endfor %}
+{% if form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">
+        {% for error in form.non_field_errors %}
+            {{ error }}
+        {% endfor %}
+    </div>
+{% endif %}
+{% for field in form.visible_fields %}
+    <div class="form-group">
+
+        {% if form.is_bound %}
+            {% if field.errors %}
+                {% if field.label == 'Tag' %}
+                    {% render_field field class="is-invalid d-none" %}
+                {% else %}
+                    {% render_field field class="is-invalid" %}
+                {% endif %}
+                {% for error in field.errors %}
+                  <div class="invalid-feedback">
+                    {{ error }}
+                  </div>
+                {% endfor %}
+            {% else %}
+                {% if field.label == 'Tag' %}
+                    {% render_field field class="is-valid d-none" %}
+                {% else %}
+                    {% render_field field class="is-valid" %}
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% if field.label == 'Tag' %}
+                {% render_field field class="d-none" %}
+            {% else %}
+                {% render_field field class="" %}
+            {% endif %}
+        {% endif %}
+        {% if field.help_text %}
+            <small class="form-text text-muted" >{{ field.help_text | safe }}</small>
+        {% endif %}
+    </div>
+{% endfor %}

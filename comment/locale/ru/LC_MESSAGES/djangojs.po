@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 19:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\comment\static\js\comment.js:161 .\comment\static\js\comment.js:304
+msgid "Replies"
+msgstr "Ответы"
+
+#: .\comment\static\js\comment.js:163 .\comment\static\js\comment.js:306
+msgid "Reply"
+msgstr "Ответ"
+
+#: .\comment\static\js\comment.js:184
+msgid "Unable to post your comment!, please try again"
+msgstr "Не удалось опубликовать комментарий, попробуйте ещё раз"
+
+#: .\comment\static\js\comment.js:205
+msgid "You can't edit this comment"
+msgstr "Вы не можете редактировать этот комментарий"
+
+#: .\comment\static\js\comment.js:228
+msgid "Modification didn't take effect!, please try again"
+msgstr "Изменения не вступили в силу, попробуйте ещё раз"
+
+#: .\comment\static\js\comment.js:272
+msgid "Deletion cannot be performed!, please try again"
+msgstr "Удаление невозможно, попробуйте ещё раз"
+
+#: .\comment\static\js\comment.js:314
+msgid "Unable to delete your comment!, please try again"
+msgstr "Не удалось удалить ваш комментарий, попробуйте ещё раз"
+
+#: .\comment\static\js\comment.js:375
+msgid "Reaction couldn't be processed!, please try again"
+msgstr "Не удалось поставить реакцию, попробуйте ещё раз"
+
+#: .\comment\static\js\comment.js:407 .\comment\static\js\comment.js:413
+msgid "${result.data.model_object}"
+msgstr ""
+
+#: .\comment\static\js\comment.js:419
+msgid "Subscription couldn't be processed!, please try again"
+msgstr "Не удалось подписаться, попробуйте ещё раз"
+
+#: .\comment\static\js\comment.js:527
+msgid "Flagging couldn't be processed!, please try again"
+msgstr "Жалоба не удалась, попробуйте ещё раз"
+
+#: .\comment\static\js\comment.js:572
+msgid "read more ..."
+msgstr "читать больше ..."
+
+#: .\comment\static\js\comment.js:574
+msgid "read less"
+msgstr "скрыть"
+
+#: .\comment\static\js\comment.js:603
+msgid "Flag rejected"
+msgstr "Жалоба отклонена"
+
+#: .\comment\static\js\comment.js:604 .\comment\static\js\comment.js:622
+msgid "Reject the flag"
+msgstr "Отклонить жалобу"
+
+#: .\comment\static\js\comment.js:609 .\comment\static\js\comment.js:617
+msgid "Resolve the flag"
+msgstr "Решить жалобу"
+
+#: .\comment\static\js\comment.js:616
+msgid "Flag resolved"
+msgstr "Жалоба решена"

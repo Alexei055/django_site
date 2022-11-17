@@ -1,0 +1,120 @@
+{% extends "main/base.html" %}
+{% load custom-filters %}
+{% load comment_tags %}
+{% include_bootstrap %}
+{% block content %}
+
+    <div class="home-article">
+
+        <div class="like" style="margin-top: 40px">
+            <div class='likesystem'>
+                <a class='likes' data-id={{ post.id }} data-type='article'>
+                    <button type="button" class="btn" id="like-button" style="box-shadow:none !important;">
+                        {% if post.likesystem.likes.all|user_in:user %}
+                            <svg id="icon--ui__rating-up" width="22px" height="16px" viewBox="0 0 16 16"
+                                 style="--darkreader-inline-fill:currentColor;">
+                                <path id='like-svg' fill="#567842"
+                                      d="M17.85 9.65c.1-.1.15-.25.15-.35 0-.15-.05-.25-.15-.35L9.8.4C9.65.2 9.35.05 9 .05c-.35 0-.65.15-.8.35L.15 8.95a.6.6 0 000 .7c.15.2.5.35.8.35h16.1c.35 0 .65-.15.8-.35z"></path>
+                            </svg>
+                        {% else %}
+                            <svg id="icon--ui__rating-up" width="22px" height="16px" viewBox="0 0 16 16"
+                                 style="--darkreader-inline-fill:currentColor;">
+                                <path id='like-svg' fill="#7d7d7d"
+                                      d="M17.85 9.65c.1-.1.15-.25.15-.35 0-.15-.05-.25-.15-.35L9.8.4C9.65.2 9.35.05 9 .05c-.35 0-.65.15-.8.35L.15 8.95a.6.6 0 000 .7c.15.2.5.35.8.35h16.1c.35 0 .65-.15.8-.35z"></path>
+                            </svg>
+                        {% endif %}
+                        <span class='countlikes' style="color:#7d7d7d">{{ post.likesystem.likes.count }}</span>
+                    </button>
+                </a>
+                <a class='dislikes' data-id={{ post.id }} data-type='article'>
+                    <button type="button" class="btn" style="margin-top: 20px; box-shadow:none !important; "
+                            id="dislike-button">
+                        <svg width="22px" height="16px" viewBox="0 0 16 16">
+                            {% if post.likesystem.dislikes.all|user_in:user %}
+                                <path id='dislike-svg' fill="#FD5D47"
+                                      d="M17.85.35c.1.1.15.25.15.35 0 .15-.05.25-.15.35L9.8 9.6c-.15.2-.45.35-.8.35-.35 0-.65-.15-.8-.35L.15 1.05a.6.6 0 010-.7C.3.15.65 0 .95 0h16.1c.35 0 .65.15.8.35z"></path>
+                            {% else %}
+                                <path id='dislike-svg' fill="#7d7d7d"
+                                      d="M17.85.35c.1.1.15.25.15.35 0 .15-.05.25-.15.35L9.8 9.6c-.15.2-.45.35-.8.35-.35 0-.65-.15-.8-.35L.15 1.05a.6.6 0 010-.7C.3.15.65 0 .95 0h16.1c.35 0 .65.15.8.35z"></path>
+                            {% endif %}
+                        </svg>
+                        <span class='countdislikes' style="color:#7d7d7d">{{ post.likesystem.dislikes.count }}</span>
+                    </button>
+                </a>
+            </div>
+            {#href="{% url 'favourite_post' %}#}
+            <a data-id="{{ post.id }}" data-type="article" data-action="bookmark" title="Избранное">
+                <button type="button" class="btn" style="margin-top: 20px;box-shadow:none !important; ">
+                    {% if post.bookmarkarticle_set.all|user_in:user %}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" fill="#ffc96c"
+                             class="bi bi-heart" id="bookmark-heart" viewBox="0 0 16 16">
+                            <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"></path>
+                        </svg>
+                    {% else %}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" fill="#7D7D7D"
+                             class="bi bi-heart" id="bookmark-heart" viewBox="0 0 16 16">
+                            <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"></path>
+                        </svg>
+                    {% endif %}
+                    <span data-count="bookmark" style="color:#7d7d7d">{{ post.get_bookmark_count }}</span>
+                </button>
+            </a>
+        </div>
+        <div id="article-detail">
+            <div class="main-detail">
+
+                {% load pygmentify_tags %}
+                <link rel="stylesheet" href="{% pygmentify_css 'monokai' %}">
+
+                {% pygmentify 'monokai' %}
+                    <div class="title" style="text-align:center">
+                        <h2> {{ post.title | safe }}</h2>
+                        {% if request.user.is_staff %}
+                            <a title="Редактировать статью" style="color: #00bc8c;"
+                               href="{% url "edit_article" post.id %}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                     fill="none"
+                                     stroke="#00bc8c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                                     class="feather feather-edit">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                </svg>
+                            </a>
+                        {% endif %}
+                    </div>
+                    <article class="card-grid">
+                        <div class="article-content">
+                            <span class="body-1">
+                                    <span style="font-size: 18px;word-wrap: break-word;">
+                                        {{ post.content | safe }}
+                                        <br>
+                                    </span>
+                                {% if post.file %}
+                                    <div id="File" style="margin-top: 32px;">
+                                        <a href="{% url "articles-download" post.id %}"
+                                           style="color:deepskyblue;">{{ post.filename }}</a>
+                                    </div>
+                                {% endif %}
+                            </span>
+                        </div>
+                    </article>
+                {% endpygmentify %}
+
+                <div id="article-footer" class="text-muted">
+                    <p>{{ post.author }} | {{ post.pub_date | date:"d-m-Y H:i" }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="top-article">
+            <h4>Читайте также</h4>
+            <div class="smolarticles">
+                {% for pop_article in popular_list %}
+                    <a href="{% url 'articles-detail' pop_article.article__id %}" class="smol-article">
+                        <span class="body-2">{{ pop_article.article__title }}</span>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% render_comments post request %}
+    </div>
+{% endblock content %}

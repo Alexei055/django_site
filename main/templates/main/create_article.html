@@ -1,0 +1,11 @@
+{% extends "main/base.html" %}
+{% block content %}
+    <h1>Добавление новой статьи</h1>
+    <br/>
+    <form method="post" enctype="multipart/form-data" action="{% url 'create_article' %}">
+    {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+    <button class="btn btn-primary btn-lg" type="submit">Добавить</button>
+    </form>
+{% endblock content %}

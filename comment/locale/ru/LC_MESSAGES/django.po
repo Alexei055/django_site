@@ -1,0 +1,555 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 19:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\comment\apps.py:8
+msgid "comment"
+msgstr "Комментарий"
+
+#: .\comment\conf\defaults.py:14
+msgid "Spam | Exists only to promote a service"
+msgstr "Спам | Реклама сервисов, услуг"
+
+#: .\comment\conf\defaults.py:15
+msgid "Abusive | Intended at promoting hatred"
+msgstr "Оскорбление | Разжигание ненависти"
+
+#: .\comment\managers\flags.py:23
+msgid "Something else"
+msgstr "Другое"
+
+#: .\comment\messages.py:5
+msgid "Comment App: LOGIN_URL is not in the settings"
+msgstr "Comment App: LOGIN_URL отсутствует в settings"
+
+#: .\comment\messages.py:6
+#, python-brace-format
+msgid ""
+"Your {class_name} class has not defined a {method_name} method, which is "
+"required."
+msgstr ""
+"В вашем классе {class_name} не определен обязательный метод {method_name}."
+
+#: .\comment\messages.py:7
+msgid "Only AJAX request are allowed"
+msgstr "Разрешены только AJAX запросы"
+
+#: .\comment\messages.py:16
+msgid "Comment App: settings var COMMENT_WRAP_CONTENT_WORDS must be an integer"
+msgstr "Comment App: параметры COMMENT_WRAP_CONTENT_WORD должны быть целым числом"
+
+#: .\comment\messages.py:20
+msgid "error"
+msgstr "Ошибка"
+
+#: .\comment\messages.py:21
+msgid "Bad Request"
+msgstr "Неправильный запрос"
+
+#: .\comment\messages.py:25
+#, python-brace-format
+msgid "{var_name} id must be an integer, {id} is NOT"
+msgstr "Тип данных {var_name} должен быть integer, {id} не integer"
+
+#: .\comment\messages.py:26
+msgid "app name must be provided"
+msgstr "Необходимо указать название приложения"
+
+#: .\comment\messages.py:27
+#, python-brace-format
+msgid "{app_name} is NOT a valid app name"
+msgstr "Недопустимое название приложения {app_name}"
+
+#: .\comment\messages.py:28
+msgid "model name must be provided"
+msgstr "Необходимо указать название модели"
+
+#: .\comment\messages.py:29
+#, python-brace-format
+msgid "{model_name} is NOT a valid model name"
+msgstr "Недопустимое название модели {model_name}"
+
+#: .\comment\messages.py:30
+msgid "model id must be provided"
+msgstr "Неоходимо указать id модели"
+
+#: .\comment\messages.py:31
+#, python-brace-format
+msgid "{model_id} is NOT a valid model id for the model {model_name}"
+msgstr "Недопустимый id {model_id} для модели {model_name}"
+
+#: .\comment\messages.py:32
+#, python-brace-format
+msgid ""
+"{parent_id} is NOT a valid id for a parent comment or the parent comment "
+"does NOT belong to the provided model object"
+msgstr ""
+"Недопустимый id {parent_id} для родительского комментария или родительский "
+"комментарий не принадлежит предоставленному объекту модели"
+
+#: .\comment\messages.py:37
+msgid "Flagging system must be enabled"
+msgstr "Необходимо включить систему жалоб"
+
+#: .\comment\messages.py:38
+msgid "Object must be flagged!"
+msgstr "Необходимо подать жалобу"
+
+#: .\comment\messages.py:39
+#, python-brace-format
+msgid "{state} is an invalid state"
+msgstr "{state} не является допустимым состоянием"
+
+#: .\comment\messages.py:40
+#, python-brace-format
+msgid "{reason} is an invalid reason"
+msgstr "Недопустимая причина {reason}"
+
+#: .\comment\messages.py:41
+msgid "Please supply some information as the reason for flagging"
+msgstr "Пожалуйста, укажите причину жалобы"
+
+#: .\comment\messages.py:42
+#, python-brace-format
+msgid "This comment is already flagged by this user ({user})"
+msgstr "{user} уже обжаловал этот комментарий"
+
+#: .\comment\messages.py:43
+#, python-brace-format
+msgid "This comment was not flagged by this user ({user})"
+msgstr "Пользователь {user} ещё не обжаловал этот комментарий"
+
+#: .\comment\messages.py:44
+msgid "This action cannot be applied on unflagged comments"
+msgstr "Это действие нельзя совершить с комментарием без жалобы"
+
+#: .\comment\messages.py:45
+msgid "The comment must be edited before resolving the flag"
+msgstr "Комментарий необходимо отредактировать перед снятием жалобы"
+
+#: .\comment\messages.py:46
+msgid "Unable to change flag state at the moment!"
+msgstr "В настоящий момент невозможно изменить состояние жалобы!"
+
+#: .\comment\messages.py:50
+#, python-brace-format
+msgid ""
+"Reaction must be an valid ReactionManager.RelationType. {reaction_type} is "
+"not"
+msgstr ""
+"Реакция должна быть действительным ReactionManager.RelationType. "
+"{reaction_type} не является"
+
+#: .\comment\messages.py:54
+msgid "Enter a valid email address."
+msgstr "Введите действительный адрес электронной почты"
+
+#: .\comment\messages.py:55
+msgid "Email is required for posting anonymous comments."
+msgstr "Для анонимной отправки комментариев необходим адрес электронной почты"
+
+#: .\comment\messages.py:56
+msgid "The link seems to be broken."
+msgstr "Похоже ссылка не действительна"
+
+#: .\comment\messages.py:57
+msgid "The comment has already been verified."
+msgstr "Комментарий уже проверен"
+
+#: .\comment\messages.py:61
+msgid "Comment flagged"
+msgstr "Комментарий помечен"
+
+#: .\comment\messages.py:62
+msgid "Comment flag removed"
+msgstr "Метка комментария убрана"
+
+#: .\comment\messages.py:66
+msgid "Your reaction has been updated successfully"
+msgstr "Реакция успешно обновлена"
+
+#: .\comment\messages.py:70
+msgid "Comment Confirmation Request"
+msgstr "Запрос на подтверждение комментария"
+
+#: .\comment\messages.py:71
+msgid ""
+"We have sent a verification link to your email.The comment will be displayed "
+"after it is verified."
+msgstr ""
+"Ссылка на подтверждение была отправлена на вашу электронную почту."
+"Комментарий будет отображаться после подтверждения."
+
+#: .\comment\messages.py:73
+msgid "email address, this will be used for verification."
+msgstr "адрес электрнонной почты, который будет использован для подтверждения"
+
+#: .\comment\messages.py:74
+msgid "email address, it will be used for verification."
+msgstr "адрес электрнонной почты, который будет использован для подтверждения"
+
+#: .\comment\messages.py:75
+#, python-brace-format
+msgid "{username} added comment to \"{thread_name}\""
+msgstr "{username} добавил комментарий в \"{thread_name}\""
+
+#: .\comment\messages.py:76
+msgid "email"
+msgstr "электронная почта"
+
+#: .\comment\messages.py:80
+msgid "Unflagged"
+msgstr "Не помеченный"
+
+#: .\comment\messages.py:81
+msgid "Flagged"
+msgstr "Помеченный"
+
+#: .\comment\messages.py:82
+msgid "Flag rejected by the moderator"
+msgstr "Жалоба отклонена модератором"
+
+#: .\comment\messages.py:83
+msgid "Comment modified by the author"
+msgstr "Комментарий изменен автором"
+
+#: .\comment\messages.py:87
+#, python-brace-format
+msgid "Email is required to subscribe {model_object}"
+msgstr "Требуется адрес электронной почты для подписки на {model_object}"
+
+#: .\comment\messages.py:88
+msgid "Subscribe system must be enabled"
+msgstr "Система подписок должна быть включена"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:8
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:2
+msgid "Hey there,"
+msgstr "Привет всем,"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:10
+msgid ""
+"You or someone on your behalf have requested to post a comment into this "
+"page:"
+msgstr ""
+"Вы или кто-то от вашего имени попросил разместить комментарий на этой "
+"странице:"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:12
+#, python-format
+msgid "at %(posted_time)s."
+msgstr "в %(posted_time)s."
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:15
+#: .\comment\templates\comment\notifications\notification.html:27
+msgid "The comment:"
+msgstr "Комментарий:"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:20
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:12
+msgid ""
+"If you do not wish to post the comment, please ignore this message or report "
+"an incident to"
+msgstr ""
+"Если вы не хотели оставлять комментарий, пожалуйста, проигнорируйте это "
+"сообщение или сообщите об инциденте"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:20
+msgid "Otherwise click on the button below to confirm the comment."
+msgstr ""
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:29
+msgid "Confirm your comment"
+msgstr "Подтвердите свой комментарий"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:38
+msgid ""
+"If clicking does not work, you can also copy the below link and paste the "
+"address into your browser's address window"
+msgstr ""
+"Если кнопка не работает, вы можете скопировать ссылку и вставить её в "
+"адресную строку браузера"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:41
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:17
+#: .\comment\templates\comment\notifications\notification.html:32
+#: .\comment\templates\comment\notifications\notification.txt:14
+msgid "Thanks for your comment!"
+msgstr "Спасибо за ваш комментарий!"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.html:43
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:20
+#: .\comment\templates\comment\notifications\notification.html:34
+#: .\comment\templates\comment\notifications\notification.txt:17
+msgid "Kind regards,"
+msgstr "С уважением,"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:4
+msgid "You or someone on behalf of you have requested to post a comment at"
+msgstr "Вы или кто-то от вашего имени попросил оставить комментарий на"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:4
+msgid "to the following URL"
+msgstr "по следующей ссылке"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:8
+#: .\comment\templates\comment\comments\create_comment.html:20
+#: .\comment\templates\comment\notifications\notification.txt:6
+msgid "Comment"
+msgstr "Комментировать"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:12
+msgid "Otherwise click on the link below to confirm the comment"
+msgstr "В противном случае нажмите на ссылку ниже, чтобы оставить комментарий"
+
+#: .\comment\templates\comment\anonymous\confirmation_request.txt:16
+#: .\comment\templates\comment\notifications\notification.html:31
+#: .\comment\templates\comment\notifications\notification.txt:13
+msgid ""
+"If clicking does not work, you can also copy and paste the address into your "
+"browser's address window"
+msgstr ""
+"Если кнопка не работает, вы можете скопировать ссылку и вставить её в "
+"адресную строку браузера"
+
+#: .\comment\templates\comment\anonymous\discarded.html:7
+msgid "Comment discarded"
+msgstr "Комментарий отклонен"
+
+#: .\comment\templates\comment\anonymous\discarded.html:13
+msgid "Comment can't be verified."
+msgstr "Комментарий не может быть подтвержден."
+
+#: .\comment\templates\comment\anonymous\discarded.html:14
+msgid "Sorry, your comment has been automatically discarded."
+msgstr "Извините, ваш комментарий был автоматически отклонен."
+
+#: .\comment\templates\comment\comments\base.html:8
+msgid "Comments"
+msgstr "Комментарии"
+
+#: .\comment\templates\comment\comments\base.html:17
+msgid "comment on this post..."
+msgstr "Прокомментировать пост..."
+
+#: .\comment\templates\comment\comments\base.html:21
+msgid "reply to this comment..."
+msgstr "Ответить на комментарий..."
+
+#: .\comment\templates\comment\comments\comment_content.html:13
+#, python-format
+msgid "view %(comment.user)s profile"
+msgstr "посмотреть профиль %(comment.user)s"
+
+#: .\comment\templates\comment\comments\comment_content.html:13
+msgid "comment by anonymous user"
+msgstr "комментарий от анонимного пользователя"
+
+#: .\comment\templates\comment\comments\comment_content.html:18
+msgid "Edited"
+msgstr "Изменен"
+
+#: .\comment\templates\comment\comments\comment_content.html:18
+#, python-format
+msgid "Edited: %(edited_time)s ago"
+msgstr "Изменен %(edited_time)s назад"
+
+#: .\comment\templates\comment\comments\comment_content.html:20
+msgid "Posted"
+msgstr "Отправлено"
+
+#: .\comment\templates\comment\comments\comment_content.html:20
+#, python-format
+msgid "%(posted_time)s ago"
+msgstr "%(posted_time)s назад"
+
+#: .\comment\templates\comment\comments\comment_content.html:39
+msgid " Reply"
+msgid_plural " Replies"
+msgstr[0] "Ответ"
+msgstr[1] "Ответа"
+msgstr[2] "Ответов"
+
+#: .\comment\templates\comment\comments\comment_modal.html:6
+msgid "Confirm comment deletion"
+msgstr "Подтвердите удаление комментария"
+
+#: .\comment\templates\comment\comments\comment_modal.html:7
+#: .\comment\templates\comment\comments\comment_modal.html:15
+#: .\comment\templates\comment\flags\flag_modal.html:8
+#: .\comment\templates\comment\follow\follow_modal.html:8
+msgid "Close"
+msgstr "Закрыть"
+
+#: .\comment\templates\comment\comments\comment_modal.html:12
+msgid "Are you sure you want to delete this comment"
+msgstr "Вы уверены, что хотите удалить этот комментарий"
+
+#: .\comment\templates\comment\comments\comment_modal.html:22
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\comment\templates\comment\comments\content.html:9
+msgid "read more"
+msgstr "читать далее"
+
+#: .\comment\templates\comment\comments\create_comment.html:20
+msgid "Reply"
+msgstr "Ответить"
+
+#: .\comment\templates\comment\comments\create_comment.html:31
+msgid "Comment Anonymously or"
+msgstr "Комментировать анонимно или"
+
+#: .\comment\templates\comment\comments\create_comment.html:33
+#: .\comment\templates\comment\comments\create_comment.html:40
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\comment\templates\comment\comments\create_comment.html:35
+msgid "to keep your conversations intact"
+msgstr "оставить ваши диалоги не тронутыми"
+
+#: .\comment\templates\comment\comments\create_comment.html:42
+msgid "to join the discussion"
+msgstr "присоединиться к обсуждению"
+
+#: .\comment\templates\comment\comments\delete_icon.html:3
+msgid "Delete comment"
+msgstr "Удалить комментарий"
+
+#: .\comment\templates\comment\comments\edit_icon.html:3
+msgid "Edit comment"
+msgstr "Редактировать комментарий"
+
+#: .\comment\templates\comment\comments\pagination.html:2
+msgid "Page navigation"
+msgstr "Навигация по старницам"
+
+#: .\comment\templates\comment\comments\pagination.html:3
+msgid "first"
+msgstr "первый"
+
+#: .\comment\templates\comment\comments\pagination.html:4
+msgid "last"
+msgstr "последний"
+
+#: .\comment\templates\comment\comments\pagination.html:5
+msgid "Next"
+msgstr "Следующий"
+
+#: .\comment\templates\comment\comments\pagination.html:6
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: .\comment\templates\comment\comments\reject_icon.html:3
+msgid "Flag rejected"
+msgstr "Жалоба отклонена"
+
+#: .\comment\templates\comment\comments\reject_icon.html:3
+msgid "Reject the flag"
+msgstr "Отклонить жалобу"
+
+#: .\comment\templates\comment\comments\resolve_icon.html:3
+msgid "Flag resolved"
+msgstr "Жалоба решена"
+
+#: .\comment\templates\comment\comments\resolve_icon.html:3
+msgid "Resolve the flag"
+msgstr "Решить жалобу"
+
+#: .\comment\templates\comment\comments\urlhash.html:2
+msgid "Permalink to this comment"
+msgstr "Постоянная ссылка на комментарий"
+
+#: .\comment\templates\comment\flags\flag_icon.html:3
+msgid "Remove flag"
+msgstr "Отозвать жалобу"
+
+#: .\comment\templates\comment\flags\flag_icon.html:3
+msgid "Report comment"
+msgstr "Пожаловаться на комментарий"
+
+#: .\comment\templates\comment\flags\flag_modal.html:7
+msgid "Please select a reason for flagging"
+msgstr "Пожалуйста, выберите причину для жалобы"
+
+#: .\comment\templates\comment\flags\flag_modal.html:22
+msgid "Flag"
+msgstr "Жалоба"
+
+#: .\comment\templates\comment\flags\flags.html:8
+msgid "flag"
+msgstr "жалоба"
+
+#: .\comment\templates\comment\follow\follow.html:9
+msgid "follow"
+msgstr "Подписаться"
+
+#: .\comment\templates\comment\follow\follow_icon.html:3
+msgid "Unfollow this thread"
+msgstr "Отписаться от этой ветки комментариев"
+
+#: .\comment\templates\comment\follow\follow_icon.html:3
+msgid "Follow this thread"
+msgstr "Подписаться на ветку комментариев"
+
+#: .\comment\templates\comment\follow\follow_modal.html:7
+msgid "Please insert your email to follow this thread"
+msgstr ""
+"Пожалуйста, введите свой адрес электронной почты, чтобы подписаться на ветку "
+"комментариев"
+
+#: .\comment\templates\comment\follow\follow_modal.html:28
+msgid "Follow"
+msgstr "Подписаться"
+
+#: .\comment\templates\comment\notifications\notification.html:6
+#: .\comment\templates\comment\notifications\notification.txt:2
+msgid "Hey"
+msgstr "Привет"
+
+#: .\comment\templates\comment\notifications\notification.html:6
+#: .\comment\templates\comment\notifications\notification.txt:2
+msgid ","
+msgstr ""
+
+#: .\comment\templates\comment\notifications\notification.html:9
+#: .\comment\templates\comment\notifications\notification.txt:4
+msgid "has added a comment at"
+msgstr "добавил комментарый в"
+
+#: .\comment\templates\comment\notifications\notification.html:9
+#: .\comment\templates\comment\notifications\notification.txt:4
+msgid "to"
+msgstr "к"
+
+#: .\comment\templates\comment\notifications\notification.html:18
+msgid "Go to site"
+msgstr "Перейти на сайт"
+
+#: .\comment\templates\comment\reactions\reactions.html:5
+msgid "like"
+msgstr "нравится"
+
+#: .\comment\templates\comment\reactions\reactions.html:16
+msgid "dislike"
+msgstr "не нравится"

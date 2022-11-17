@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="login-main">
+        <div class="login-form">
+            <div class="login-form-content">
+                <h2>Войти</h2>
+                <form method="post">
+                    {% include 'form.html' %}
+                    {% csrf_token %}
+                    {% block formbtn %}
+                        <button type="submit" class="btn btn-outline-primary btn-block form-btn-w mr-2 mt-2">Войти
+                        </button>
+                    {% endblock formbtn %}
+                </form>
+                <div style="margin-top: 10px">
+                    Нет аккаунта?
+                    <a href="{% url 'register' %}" id="registerbtn">Зарегистрируйтесь</a>
+                    <br>
+                    <a style="color: #0d84fb" href="{% url 'password_reset' %}">Сбросить пароль</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

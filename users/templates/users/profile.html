@@ -1,0 +1,67 @@
+{% extends "main/base.html" %}
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <div class="title-page">
+                <h2>Профиль {{ user.username }}</h2>
+            </div>
+            <div class="user-page">
+                <article class="user-page-content">
+                    <div class="container">
+                        <div class="content">
+                            <div class="user-card">
+                                <img class="rounded-circle account-img"
+                                     src="{{ user.profile.image.url }}">
+                            </div>
+                            {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                        <div class="alert alert-success" role="alert">
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            <h3> Настройки</h3>
+                            <form method="POST" enctype="multipart/form-data" class="settings-form">
+                                {% csrf_token %}
+                                <div class="user-settings">
+                                    <div class="form-group">
+                                        <label for="id_email">Ваша почта</label>
+                                        {{ u_form.email }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_username">Ваше имя</label>
+                                        {{ u_form.username }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_username">Аватар</label>
+
+                                        {{ p_form.image }}
+
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="{% url "password_change" %}" class = "btn btn-outline-secondary" style="margin-top:25px">Изменить пароль</a> <!-- сделайте тут кнопку, укажите класс btn btn-outline-secondary -->
+                                    </div>
+                                    <div id="obnovit" class="form-button">
+                                        <button class="btn btn-primary btn-lg" type="submit">Обновить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="temp-info">
+                            <span class="caption-1">Электронная почта</span>
+                            <span class="body-2">{{ user.email }}</span>
+                            <span class="caption-1">Статус</span>
+                            <span class="body-2">{{ user.profile.get_online_info }}</span>
+                            <span class="caption-1">Зарегистрирован</span>
+                            <span class="body-2">{{ user.date_joined }}</span>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </form>
+{% endblock content %}

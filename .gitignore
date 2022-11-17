@@ -1,0 +1,12 @@
+.idea
+__pycache__
+.pyc
+.iml
+.xml
+
+prod_settings.py
+config
+logs
+media/uploads*
+media/code_files*
+static
